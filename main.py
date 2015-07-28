@@ -3,7 +3,7 @@
 from GameScoreBoard import GameScoreBoard
 
 def main():
-	scoreBoard = GameScoreBoard();	
+	scoreBoard = GameScoreBoard();
 
 	for c in "abababaa":
 		scoreBoard.updateScore(c);

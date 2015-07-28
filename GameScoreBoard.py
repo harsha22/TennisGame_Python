@@ -2,7 +2,7 @@
 WINNING_DIFF = 2;
 DEUCE_CONDITION = 3
 SCORE_VALUES = ["0","15","30","40"]
-
+NO_WINNER = False
 LOSS = 'Loss'
 
 class GameScoreBoard(object):
@@ -39,7 +39,7 @@ class GameScoreBoard(object):
 		elif (self.score['b'] == 'Game') :
 			return 'b'
 		else :
-			return -1;
+			return NO_WINNER;
 
 	def toString(self):
 		scoreA = self.score['a'];
