@@ -16,8 +16,12 @@ def main(fileinput):
 
 	for line in lines:
 		if line == "END SET":
+			print "--------------"
 			matchScoreBoard.addSet(setScoreBoard)
 			setScoreBoard = SetScoreBoard();
+
+			print matchScoreBoard.toString();
+			print "---------------"
 			continue
 		
 		gameScoreBoard = GameScoreBoard();
@@ -25,6 +29,7 @@ def main(fileinput):
 		for player in line:
 			gameScoreBoard.updateScore(player)
 
+		print gameScoreBoard.toString();
 		setScoreBoard.updateScore(gameScoreBoard)
 
 	print matchScoreBoard.toString();
