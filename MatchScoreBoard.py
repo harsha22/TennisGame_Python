@@ -12,8 +12,9 @@ class MatchScoreBoard(object):
 	def addSet(self,setScoreBoard):
 		if len(self.setScoreBoards) != 5:
 			winner = setScoreBoard.winner();
+			
 			self.score[winner] += 1;
-			setScoreBoards.append(setScoreBoard)
+			self.setScoreBoards.append(setScoreBoard)
 
 	def winner(self):
 		if any( [score >=3 for score in self.score.values()] ):
@@ -25,5 +26,5 @@ class MatchScoreBoard(object):
 			return False;
 
 	def toString(self):
-		return self.score['a'] + " - " + self.score['b'];
+		return str(self.score['a']) + " - " + str(self.score['b']);
 		

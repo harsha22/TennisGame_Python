@@ -8,7 +8,7 @@ class SetScoreBoard(object):
 		self.score['a'] = 0;
 		self.score['b'] = 0;
 
-	def updateScore(gameScoreBoard):
+	def updateScore(self, gameScoreBoard):
 		winner = gameScoreBoard.winner();
 		if winner == NO_WINNER:
 			pass
@@ -25,5 +25,5 @@ class SetScoreBoard(object):
 			return False;
 
 	def toString(self):
-		return self.score['a'] + " - " + self.score['b'];
+		return str(self.score['a']) + " - " + str(self.score['b']);
 
